@@ -1,0 +1,42 @@
+<h2 class="text-center mt-4">Update Product</h2>
+<div class="addSection container my-4">
+    <form action="/sendUpdate/{{id}}" method="post" enctype="multipart/form-data">
+        <div class="mb-4">
+            <h5 class="form-label">Product Name</h5>
+            <input required type="text" class="form-control" name="productName" value={{{name}}} >
+        </div>
+        <div class="mb-4">
+            <h5 for="exampleInputEmail1" class="form-label">Product Category</h5>
+            <select class="form-select" name="productCategory" required >
+                <option value="Conveyor" {{#eq category 'Conveyor' }}selected{{/eq}}>Conveyor</option>
+                <option value="Battery Machines" {{#eq category 'Battery Machines' }}selected{{/eq}}>Battery Machines</option>
+                <option value="Liquid Filling Machine" {{#eq category 'Liquid Filling Machine' }}selected{{/eq}}>Liquid Filling Machine</option>
+                <option value="Feeder Machine" {{#eq category 'Liquid Filling' }}selected{{/eq}}>Feeder Machine</option>
+                <option value="Labelling Machine" {{#eq category 'Labelling Machine' }}selected{{/eq}}>Labelling Machine</option>
+                <option value="Shrink Machine" {{#eq category 'Shrink Machine' }}selected{{/eq}}>Shrink Machine</option>
+                <option value="Other Machineries" {{#eq category 'Other Machineries' }}selected{{/eq}}>Other Machineries</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <h5 class="form-label">Product Description</h5>
+            <textarea id="noise1" class="widgEditor nothing" name="productDesc">{{{description}}}</textarea>
+        </div>
+        <div class="mb-4">
+            <h5 class="form-label">Product Applications</h5>
+            <textarea id="noise2" class="widgEditor nothing" name="productApp">{{{application}}}</textarea>
+        </div>
+        <div class="mb-4">
+            <h5 class="form-label">Product Features</h5>
+            <textarea id="noise3" class="widgEditor nothing" name="productFea">{{{features}}}</textarea>
+        </div>
+        <div class="mb-4">
+            <h5 class="form-label">Product Image</h5>
+            <img src='data:{{contentType}};base64,{{imageBase64}}' class="h-25 w-25 mb-2" title={{filename}}>
+            <input class="form-control hidden" type="file" id="formFile" name="productImg">
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-warning me-2">Go Ahead</button>
+            <button type="reset" class="btn btn-warning">Reset</button>
+        </div>
+    </form>
+</div>

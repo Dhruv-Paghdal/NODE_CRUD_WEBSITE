@@ -1,0 +1,41 @@
+<h2 class="text-center mt-4">Add Product</h2>
+<div class="addSection container my-4">
+    <form action="/sendData" method="post" enctype="multipart/form-data">
+        <div class="mb-4">
+            <h5 class="form-label">Product Name</h5>
+            <input type="text" class="form-control" name="productName" required>
+        </div>
+        <div class="mb-4">
+            <h5 for="exampleInputEmail1" class="form-label">Product Category</h5>
+            <select class="form-select" name="productCategory" required>
+                <option value="Conveyor" selected>Conveyor</option>
+                <option value="Battery Machines">Battery Machines</option>
+                <option value="Liquid Filling Machine">Liquid Filling Machine</option>
+                <option value="Feeder Machine">Feeder Machine</option>
+                <option value="Labelling Machine">Labelling Machine</option>
+                <option value="Shrink Machine">Shrink Machine</option>
+                <option value="Other Machineries">Other Machineries</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <h5 class="form-label">Product Description</h5>
+            <textarea id="noise1" class="widgEditor nothing" name="productDesc"></textarea>
+        </div>
+        <div class="mb-4">
+            <h5 class="form-label">Product Applications</h5>
+            <textarea id="noise2" class="widgEditor nothing" name="productApp"></textarea>
+        </div>
+        <div class="mb-4">
+            <h5 class="form-label">Product Features</h5>
+            <textarea id="noise3" class="widgEditor nothing" name="productFea"></textarea>
+        </div>
+        <div class="mb-4">
+            <h5 class="form-label">Product Image</h5>
+            <input class="form-control" type="file" id="formFile" name="productImg" required>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-warning me-2">Go Ahead</button>
+            <button type="reset" class="btn btn-warning">Reset</button>
+        </div>
+    </form>
+</div>

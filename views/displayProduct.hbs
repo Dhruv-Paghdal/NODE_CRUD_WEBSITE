@@ -1,0 +1,33 @@
+<h1 class="text-center my-4">Display Products</h1>
+<div class="container d-flex flex-column align-items-center justify-content-center">
+    {{#if cats}}
+    {{#each cats}}
+        <div class="card shadow mb-4" style="width: 70%;">
+            <img src='data:{{contentType}};base64,{{imageBase64}}' class="card-img img-fluid" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{name}}
+                </h5>
+                <h6>Category : </h6>{{{category}}}
+                <h6>Description :</h6>
+                {{{description}}}
+                <h6>Applications :</h6>
+                {{{application}}}
+                <h6>Features :</h6>
+                {{{features}}}
+                <a><button class="btn btn-info me-2" onclick="updateProduct('{{id}}')"><i class="fas fa-edit text-light"></i></button></a>
+                <button class="btn btn-danger" onclick="deleteProduct('{{id}}')"><i class="fas fa-trash-alt"></i></button>
+            </div>
+        </div>
+    {{/each }} 
+    {{else}}
+    <div style="height: 95vh;">
+        <div class="card shadow mt-4" style="width: 100%;">
+            <div class="card-body">
+                <h4>No Product To Display</h4>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+</div>
+

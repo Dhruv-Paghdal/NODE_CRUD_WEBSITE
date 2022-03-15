@@ -1,0 +1,223 @@
+{{!-- Modal Start --}}
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">HK INDUSTRIES</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/sendEnquiry" method="post">
+          <div class="mb-3">
+              <h5 class="form-label">Name<span style="color: red;">*</span></h5>
+              <input type="text" class="form-control" id="exampleInputPassword1" name="buyerName" required>
+          </div>
+          <div class="mb-3">
+              <h5 class="form-label">Describe Your BUYING Requirement <span style="color: red;">*</span></h5>
+              <textarea cols="30" rows="5" class="form-control" name="requirement" required></textarea>
+          </div>
+          <div class="mb-3">
+              <h5 class="form-label">Email address <span style="color: red;">*</span></h5>
+              <input type="email" class="form-control" id="exampleInputEmail1" name="email" required>
+          </div>
+          <div class="mb-3">
+              <h5 class="form-label">Mobile <span style="color: red;">*</span></h5>
+              <input type="text" class="form-control" id="exampleInputPassword1" name="mobile" required>
+          </div>
+          <button type="submit" class="btn btn-warning">Send Enquiry</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{{!-- Modal End --}}
+
+<div class="products">
+    <div class="allProducts">
+      <a name="conMac"></a>
+      <h1 class="py-2">Conveyor</h1>
+      <div class="container">
+        <div class="items container">
+          {{#each conveyorDetail}}
+                <div class="card border-0 shadow my-5" data-aos="fade-right">
+                  <div class="card-body p-4">
+                    <h2 class="card-title machineName">{{name}}</h2>
+                    <div class="row">
+                      <img src='data:{{contentType}};base64,{{imageBase64}}' class="col-md-7 mb-4" alt="">
+                      <div class="col-md-5">{{{description}}}</div>
+                    </div>
+                    <h4>Applications</h4>
+                    {{{application}}}
+                    <h4>Features</h4>
+                    <div class="d-flex flex-column flex-sm-row justify-content-between">
+                      {{{features}}}
+                      <div class="d-flex align-items-end">
+                        <button class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquiry Now!</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          {{/each}}
+        </div>
+      </div>
+      <a name="batMac"></a>
+      <h1 class="py-2">Battery Machine</h1>
+      <div class="container">
+        <div class="items container">
+          {{#each batteryDetail}}
+                <div class="card border-0 shadow my-5" data-aos="fade-right">
+                  <div class="card-body p-4">
+                    <h2 class="card-title machineName">{{name}}</h2>
+                    <div class="row">
+                      <img src='data:{{contentType}};base64,{{imageBase64}}' class="col-md-7 mb-4" alt="">
+                      <div class="col-md-5">{{{description}}}</div>
+                    </div>
+                    <h4>Applications</h4>
+                    {{{application}}}
+                    <h4>Features</h4>
+                    <div class="d-flex flex-column flex-sm-row justify-content-between">
+                      {{{features}}}
+                      <div class="d-flex align-items-end">
+                        <button class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquiry Now!</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          {{/each}}
+        </div>
+      </div>
+      <a name="filMac"></a>
+      <h1 class="py-2">Liquid Filling Machine</h1>
+      <div class="container">
+        <div class="items container">
+          {{#each fillingDetail}}
+                <div class="card border-0 shadow my-5" data-aos="fade-right">
+                  <div class="card-body p-4">
+                    <h2 class="card-title machineName">{{name}}</h2>
+                    <div class="row">
+                      <img src='data:{{contentType}};base64,{{imageBase64}}' class="col-md-7 mb-4" alt="">
+                      <div class="col-md-5">{{{description}}}</div>
+                    </div>
+                    <h4>Applications</h4>
+                    {{{application}}}
+                    <h4>Features</h4>
+                    <div class="d-flex flex-column flex-sm-row justify-content-between">
+                      {{{features}}}
+                      <div class="d-flex align-items-end">
+                        <button class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquiry Now!</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          {{/each}}
+        </div>
+      </div>
+      <a name="fedMac"></a>
+      <h1 class="py-2">Feeder Machine</h1>
+      <div class="container">
+        <div class="items container">
+          {{#each feederDetail}}
+                <div class="card border-0 shadow my-5" data-aos="fade-right">
+                  <div class="card-body p-4">
+                    <h2 class="card-title machineName">{{name}}</h2>
+                    <div class="row">
+                      <img src='data:{{contentType}};base64,{{imageBase64}}' class="col-md-7 mb-4" alt="">
+                      <div class="col-md-5">{{{description}}}</div>
+                    </div>
+                    <h4>Applications</h4>
+                    {{{application}}}
+                    <h4>Features</h4>
+                    <div class="d-flex flex-column flex-sm-row justify-content-between">
+                      {{{features}}}
+                      <div class="d-flex align-items-end">
+                        <button class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquiry Now!</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          {{/each}}
+        </div>
+      </div>
+      <a name="labMac"></a>
+      <h1 class="py-2">Labelling Machine</h1>
+      <div class="container">
+        <div class="items container">
+          {{#each labellingDetail}}
+                <div class="card border-0 shadow my-5" data-aos="fade-right">
+                  <div class="card-body p-4">
+                    <h2 class="card-title machineName">{{name}}</h2>
+                    <div class="row">
+                      <img src='data:{{contentType}};base64,{{imageBase64}}' class="col-md-7 mb-4" alt="">
+                      <div class="col-md-5">{{{description}}}</div>
+                    </div>
+                    <h4>Applications</h4>
+                    {{{application}}}
+                    <h4>Features</h4>
+                    <div class="d-flex flex-column flex-sm-row justify-content-between">
+                      {{{features}}}
+                      <div class="d-flex align-items-end">
+                        <button class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquiry Now!</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          {{/each}}
+        </div>
+      </div>
+      <a name="shrMac"></a>
+      <h1 class="py-2">Shrink Machine</h1>
+      <div class="container">
+        <div class="items container">
+          {{#each shrinkDetail}}
+                <div class="card border-0 shadow my-5" data-aos="fade-right">
+                  <div class="card-body p-4">
+                    <h2 class="card-title machineName">{{name}}</h2>
+                    <div class="row">
+                      <img src='data:{{contentType}};base64,{{imageBase64}}' class="col-md-7 mb-4" alt="">
+                      <div class="col-md-5">{{{description}}}</div>
+                    </div>
+                    <h4>Applications</h4>
+                    {{{application}}}
+                    <h4>Features</h4>
+                    <div class="d-flex flex-column flex-sm-row justify-content-between">
+                      {{{features}}}
+                      <div class="d-flex align-items-end">
+                        <button class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquiry Now!</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          {{/each}}
+        </div>
+      </div>
+      <a name="othMac"></a>
+      <h1 class="py-2">Other Machineries</h1>
+      <div class="container">
+        <div class="items container">
+          {{#each otherDetail}}
+                <div class="card border-0 shadow my-5" data-aos="fade-right">
+                  <div class="card-body p-4">
+                    <h2 class="card-title machineName">{{name}}</h2>
+                    <div class="row">
+                      <img src='data:{{contentType}};base64,{{imageBase64}}' class="col-md-7 mb-4" alt="">
+                      <div class="col-md-5">{{{description}}}</div>
+                    </div>
+                    <h4>Applications</h4>
+                    {{{application}}}
+                    <h4>Features</h4>
+                    <div class="d-flex flex-column flex-sm-row justify-content-between">
+                      {{{features}}}
+                      <div class="d-flex align-items-end">
+                        <button class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquiry Now!</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+</div>

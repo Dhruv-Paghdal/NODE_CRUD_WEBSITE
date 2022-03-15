@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Teko:wght@300;400;500;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Teko",sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+li h2{
+  font-family: "Teko";
+  font-size: 38px;
+  color: #ff9900;
+}
+
+li a{
+  color: white;
+}
+
+li a:hover{
+  color: whitesmoke;
+}
+
+.mobLogo{
+  display: none;
+}
+
+.navbar-toggler:focus,.btn:focus{
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+#home, #services, #products, #about{
+  color: rgb(238, 99, 0) ;
+  font-weight: 500;
+  font-size: 1.2rem;
+  font-family: "Poppins";
+  border-bottom: 5px solid transparent;
+}
+
+#home:hover,
+#services:hover,
+#products:hover,
+#about:hover{
+  border-bottom: 5px solid orange ;
+  background-color: rgba(255, 166, 0, 0.356);
+}
+
+.topBanner {
+  background-image: url("../../images/bgImage-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.nav-link {
+  font-size: 1.3rem;
+  border: solid 1px transparent;
+  border-radius: 3px;
+}
+
+.navInfo {
+ height: 80%;
+ padding-top: 20vh;
+}
+
+.navText p{
+  font-size: 1.3rem;
+  font-weight: 100;
+  width: 90vh;
+  color: rgb(238, 99, 0);
+  font-family: "Poppins";
+}
+
+.navText button{
+  color: white;
+  font-family: "Poppins";
+}
+
+.navText button:hover{
+  background: white;
+  color: orange;
+}
+
+#navBar{
+  border-bottom: 5px solid orange;
+}
+
+.glimpsCard,.items .card{
+  background: rgb(248, 245, 243);
+  border: none;
+}
+
+.glimpsCard i{
+  color: rgb(238, 99, 0);
+  font-size: 3rem;
+  background-color: white;
+  border-radius: 70px;
+}
+
+.glimpsCard h2{
+  font-size: 37px;
+}
+
+.glimpsCard p,.aboutHome p{
+  font-family: "Poppins";
+  font-size: 20px;
+}
+
+.aboutBackground{
+  background: linear-gradient(10deg, rgba(233, 232, 232, 0.39), rgba(241, 241, 241, 0.425)),url("../../images/about-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.howBackground{
+  background: linear-gradient(10deg, rgba(233, 232, 232, 0.39), rgba(241, 241, 241, 0.425)),url("../../images/how-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aboutHome h2,.homeServices h2,.how h2,.customer h2,.servicesItems h2{
+  font-size: 40px;
+  color: #ff9900;
+}
+
+.homeServices img{
+  height: 70%;
+  width: 70%;
+}
+
+.servicesItems img{
+  height: 80%;
+  width: 80%;
+}
+
+.how i{
+  color: rgb(238, 99, 0);
+  font-size: 3rem;
+  background-color: white;
+  border-radius: 70px;
+  border: 2px solid rgb(238, 99, 0);
+}
+
+.how p{
+  font-size: 25px;
+  font-weight: 450;
+  font-family: "Poppins";
+}
+
+.customerData img{
+  padding: 1px;
+  height: 10vh;
+  margin: 5px;
+  border-bottom: 3px solid transparent;
+}
+
+.customerData img:hover{
+  border-bottom: 3px solid orange;
+}
+
+#review{
+  font-family: 'Poppins';
+  font-size: 20px;
+}
+
+#customerCompany{
+  font-family: 'Poppins';
+  color:rgb(238, 99, 0);
+  font-size: 20px;
+  font-weight: 430;
+}
+
+.allProducts h1{
+  background:linear-gradient(45deg,rgb(53,25,25),rgb(88, 10, 10));
+  font-size: 45px;
+  color: #ff9900;
+  text-align: center;
+}
+
+.about p{
+  font-family: "Poppins";
+  font-size: 20px;
+}
+
+.items p,.items li{
+  font-size: 18px;
+  font-family: "Poppins";
+}
+
+.items img{
+  border: 1px solid transparent;
+  border-radius: 5%;
+}
+
+.items button{
+  color: white;
+  font-size: 17px;
+  font-weight: 450;
+  font-family: "Poppins";
+}
+
+.items button:hover{
+  color: orange;
+  background: white;
+
+}
+
+.items h4{
+  color: rgb(238, 99, 0);
+  font-size: 30px;
+}
+
+.machineName{
+  text-align: center;
+  color: rgb(238, 99, 0);
+  font-size: 38px;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: rgb(88, 10, 10);
+  box-shadow: black 0px 2px 18px 0px;
+}
+ 
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+  z-index: 1;
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background: linear-gradient(45deg,rgb(53,25,25),rgb(88, 10, 10));
+  border-radius: 10px;
+  box-shadow: black 0px 2px 18px 0px;
+}
+
+.timeline ul li div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+}
+ 
+.timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent rgb(88, 10, 10) transparent transparent;
+}
+.timeline ul li:nth-child(even) div {
+  left: -439px;
+}
+ 
+.timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent rgb(88, 10, 10);
+}
+
+.timeline ul li::after {
+  background: orangered;
+  transition: background .5s ease-in-out;
+}
+ 
+.timeline ul li.in-view::after {
+  background: orangered;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+ 
+.timeline ul li:nth-child(odd) div {
+  transform: translate3d(200px,0,0);
+}
+ 
+.timeline ul li:nth-child(even) div {
+  transform: translate3d(-200px,0,0);
+}
+ 
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+.in-view div h4{
+  font-size:30px;
+  color:rgb(238, 99, 0);
+  text-transform: capitalize;
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.in-view{
+  color:rgba(255, 255, 255, 0.856);
+  font-size: 20px;
+  font-weight: 400;
+  border-radius:10px;
+}
+
+footer{
+  background: linear-gradient(45deg,rgb(53,25,25),rgb(88, 10, 10));
+  color: white;
+}
+
+footer ul{
+  padding: 0%;
+}
+
+footer li{
+  padding: 0%;
+  list-style-type: none;
+  font-family: "Poppins";
+}
+
+.copyright{
+  font-family: "Poppins";
+  color: white;
+  background: rgb(37, 3, 3);
+}
+
+input,textarea{
+  font-family: "Poppins";
+}
+
+.modal-body button,.modal-footer button{
+  font-family: "Poppins";
+  color: white;
+}
+
+@media screen and (min-width: 320px) and (max-width: 760px) {
+
+  h4{
+    font-size: 25px !important;
+  }
+
+  .topBanner{
+    height: 100vh;
+  }
+
+  .mobLogo{
+    display: block !important;
+  }
+
+  .desLogo{
+    display: none !important;
+  }
+
+  #navBar{
+    background: linear-gradient(45deg,rgb(53,25,25),rgb(88, 10, 10)) !important;
+  }
+
+  .navbar-nav{
+    background:white;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .navInfo{
+    padding:3rem;
+    padding-top: 18vh;
+    padding-left:1.5rem;
+  }
+
+  .navText h1{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 52px !important;
+  }
+
+  .navText p{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    width: auto;
+  }
+
+  .navButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .navText button{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+  } 
+
+  .navInfo {
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .glimpsCard h2{
+    font-size: 35px;
+  }
+
+  .glimpsCard p,.aboutHome p{
+    font-family: "Poppins";
+    font-size: 18px;
+  }
+
+  .homeServices img,.servicesItems img{
+    height: 100%;
+    width: 100%;
+  }
+
+  .how p{
+    font-size: 20px;
+    font-weight: 450;
+  }
+
+  .items p,.items li{
+    font-size: 16px;
+  }
+
+  .timeline{
+    position: relative;
+    right:45px;
+  }
+
+  .timeline ul li {
+      margin-left: 20px;
+  }
+    
+  .timeline ul li div {
+      width: calc(100vw - 91px);
+  }
+
+  .complianceDiv{
+      width: calc(100vw - 120px) !important;
+  }
+    
+  .timeline ul li:nth-child(even) div {
+      left: 45px;
+  }
+    
+  .timeline ul li:nth-child(even) div::before {
+      left: -15px;
+      border-width: 8px 16px 8px 0;
+      border-color: transparent rgb(88, 10, 10) transparent transparent;
+  }
+
+  .in-view div h2{
+      font-size:30px;
+  }
+
+  .in-view{
+      font-size: 15px;
+  }
+  
+}

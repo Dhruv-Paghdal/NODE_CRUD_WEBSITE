@@ -1,0 +1,27 @@
+<div style="height: 100vh;">
+    <div class="mainSection d-flex justify-content-center flex-column align-items-center">
+        <h2 class="text-center mb-4">Edit Product</h2>
+        <div class="card shadow" style="width: 23rem;">
+            <div class="card-body">
+                <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_xbf1be8x.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  autoplay loop  ></lottie-player>
+                <form action="/backend/editProduct/selectProduct" method="post" class="container">
+                    <div class="mb-4">
+                        <h5 for="exampleInputEmail1" class="form-label">Product Category</h5>
+                        <select class="form-select" name="productCategory" required>
+                            <option value="Conveyor" selected>Conveyor</option>
+                            <option value="Battery Machines">Battery Machines</option>
+                            <option value="Liquid Filling Machine">Liquid Filling Machine</option>
+                            <option value="Feeder Machine">Feeder Machine</option>
+                            <option value="Labelling Machine">Labelling Machine</option>
+                            <option value="Shrink Machine">Shrink Machine</option>
+                            <option value="Other Machineries">Other Machineries</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-warning">Go Ahead</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

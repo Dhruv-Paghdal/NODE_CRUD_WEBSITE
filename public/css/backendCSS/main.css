@@ -1,0 +1,14 @@
+footer, .navbar{
+    background: linear-gradient(45deg,rgb(53,25,25),rgb(88, 10, 10)) !important;
+}
+
+input:focus,select:focus,textarea:focus{
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.mainSection, .loginSection{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
