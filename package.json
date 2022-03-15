@@ -23,5 +23,8 @@
     "nodemailer": "^6.7.2",
     "nodemon": "^2.0.15",
     "promise-loading-spinner": "^3.0.0"
+  },
+  "engines": {
+    "node": "14.16.0"
   }
 }
