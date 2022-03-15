@@ -30,6 +30,6 @@ Handlebars.registerHelper('eq', function( a, b ){
 	return (a === b) ? next.fn(this) : next.inverse(this);
 });
 
-app.listen(PORT,()=>{
-    console.log(`Express Server Running on http://localhost:${PORT}`);
+app.listen(process.env.PORT || 3000,()=>{
+    console.log(`Express Server Running on http://localhost:${process.env.PORT}`);
 })
