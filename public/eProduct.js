@@ -1,5 +1,5 @@
 // require("dotenv").config();
-const host=`http://localhost:${process.env.PORT || 3000}`;
+const host=`http://localhost:${process.env.PORT}`;
 
 let deleteProduct=async (id)=>{
     const url=`${host}/backend/editProduct/deleteProduct/${id}`;
