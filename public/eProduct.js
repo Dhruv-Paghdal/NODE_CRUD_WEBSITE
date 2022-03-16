@@ -1,4 +1,4 @@
-const host='http://localhost:4500';
+const host=`http://localhost:${process.env.PORT || 3000}`;
 
 let deleteProduct=async (id)=>{
     const url=`${host}/backend/editProduct/deleteProduct/${id}`;
