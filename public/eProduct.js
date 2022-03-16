@@ -1,3 +1,4 @@
+require("dotenv").config();
 const host=`http://localhost:${process.env.PORT || 3000}`;
 
 let deleteProduct=async (id)=>{
