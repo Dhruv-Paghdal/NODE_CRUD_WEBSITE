@@ -7,9 +7,12 @@ const path = require('path');
 const route  = require('./server/routes/router');
 const connection = require('./server/database/database');
 const app = express();
-const PORT = 4500;
+const apiCall=require('./apiCall')
+require("dotenv").config();
 
 connection;
+apiCall.deleteProduct;
+apiCall.updateProduct;
 
 app.set('view engine','hbs');
 app.use(express.static(path.join(__dirname,'/public')));
