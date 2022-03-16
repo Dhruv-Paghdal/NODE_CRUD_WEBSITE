@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 const Products = require("../models/products");
 const nodeMailer=require('nodemailer');
 require("dotenv").config();
