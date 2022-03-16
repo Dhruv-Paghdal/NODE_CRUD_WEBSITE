@@ -1,5 +1,7 @@
 const host=`http://localhost:${process.env.PORT}`;
 
+console.log(host);
+
 exports.deleteProduct=async (id)=>{
     const url=`${host}/backend/editProduct/deleteProduct/${id}`;
     const response = await fetch(url, {
