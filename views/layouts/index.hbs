@@ -43,7 +43,7 @@
 <script type="module" src="/eProduct.js">
   import {deleteProduct} from "/eProduct.js";
   import {updateProduct} from "/eProduct.js";
-  window.deleteProduct = deleteProduct;
-  window.updateProduct = updateProduct;
+  document.querySelector('#deleteProduct').addEventListener('click', deleteProduct)
+  document.querySelector('#updateProduct').addEventListener('click', updateProduct)
 </script>
 </html>
