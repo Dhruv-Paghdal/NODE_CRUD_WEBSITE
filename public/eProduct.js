@@ -1,7 +1,6 @@
-require("dotenv").config();
 const host=`http://localhost:${process.env.PORT}`;
 
-exports.deleteProduct=async (id)=>{
+const deleteProduct=async (id)=>{
     const url=`${host}/backend/editProduct/deleteProduct/${id}`;
     const response = await fetch(url, {
       method: 'DELETE', 
@@ -11,8 +10,7 @@ exports.deleteProduct=async (id)=>{
     });
     window.location.href=response.url;
 }
-
-exports.updateProduct=async (id)=>{
+const updateProduct=async (id)=>{
     const url=`${host}/backend/editProduct/updateProduct/${id}`; 
     const response = await fetch(url, {
       method: 'GET', 
