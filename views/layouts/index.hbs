@@ -40,5 +40,10 @@
     </div>
 </footer>
 </body>
-<script type="module" src="/eProduct.js"></script>
+<script type="module" src="/eProduct.js">
+  import {deleteProduct} from "/eProduct.js";
+  import {updateProduct} from "/eProduct.js";
+  window.deleteProduct = deleteProduct;
+  window.updateProduct = updateProduct;
+</script>
 </html>
