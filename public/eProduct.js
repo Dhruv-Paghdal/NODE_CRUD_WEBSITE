@@ -1,5 +1,4 @@
-const deleteProduct=(hostNumber,id)=>{
-    const host=`http://localhost:${hostNumber}`;
+const deleteProduct=(id)=>{
     const url=`/backend/editProduct/deleteProduct/${id}`;
     fetch(url, {
       method: 'DELETE', 
@@ -13,8 +12,7 @@ const deleteProduct=(hostNumber,id)=>{
     }).then((response)=>{window.location.href=response.url}).catch((err)=>{console.log(err)});
 }
 
-const updateProduct=(hostNumber,id)=>{
-    const host=`http://localhost:${hostNumber}`;
+const updateProduct=(id)=>{
     const url=`/backend/editProduct/updateProduct/${id}`; 
     fetch(url, {
       method: 'GET', 
