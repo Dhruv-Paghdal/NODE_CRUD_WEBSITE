@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const path = require('path');
 const route  = require('./server/routes/router');
 const connection = require('./server/database/database');
+const cors = require('cors');
 const app = express();
 require("dotenv").config();
 
@@ -22,6 +23,7 @@ app.engine('hbs',hbs.engine({
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors());
 
 app.use("/",route);
 
