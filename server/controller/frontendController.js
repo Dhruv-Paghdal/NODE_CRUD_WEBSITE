@@ -2,6 +2,7 @@ const Products = require("../models/products");
 const nodeMailer=require('nodemailer');
 require("dotenv").config();
 
+// Setup for sending mail
 let transporter = nodeMailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
@@ -28,16 +29,7 @@ let feederDetail=new Array;
 let shrinkDetail=new Array;
 let otherDetail=new Array;
 
-// let conveyorData;
-// let labellingData;
-// let fillingData;
-// let batteryData;
-// let feederData;
-// let shrinkData;
-// let otherData;
-
-let loading=true;
-
+// Getting Details of all products
 let productDetails=()=>{
     Products.find({category:'Conveyor'}).then((result)=>{
         for (let index = 0; index < result.length; index++) {
@@ -145,6 +137,7 @@ let productDetails=()=>{
     }).catch((err)=>{console.log(err)});
 }
 
+// Getting images for home page
 let images=()=>{  
     Products.findOne({name:'Belt Conveyor'}).then((result)=>{
         conveyorImage={
@@ -200,22 +193,27 @@ let images=()=>{
 images();
 productDetails();
 
+// Home page route
 exports.home=(req,res)=>{
     res.render('main',{layout:"home",conveyorImage,labellingImage,fillingImage,batteryImage})
 }
 
+// Service page route
 exports.services=(req,res)=>{
     res.render('services',{layout:"home",conveyorImage,labellingImage,fillingImage,batteryImage,feederImage,shrinkImage,otherImage})
 }
 
+// Products page route
 exports.products=(req,res)=>{
     res.render('products',{layout:"home",conveyorDetail,batteryDetail,labellingDetail,fillingDetail,feederDetail,shrinkDetail,otherDetail})
 }
 
+// About page route
 exports.about=(req,res)=>{
     res.render('about',{layout:"home"})
 }
 
+// Mail Sending routes
 exports.sendEnquiry=(req,res)=>{
     let enquiry=req.body.requirement;
     let buyerName=req.body.buyerName;
@@ -241,6 +239,3 @@ ${buyerName}.`
     
     res.redirect('/products');
 }
-
-
-
