@@ -1,6 +1,6 @@
 const deleteProduct=(hostNumber,id)=>{
     const host=`http://localhost:${hostNumber}`;
-    const url=`${host}/backend/editProduct/deleteProduct/${id}`;
+    const url=`${/backend/editProduct/deleteProduct/${id}`;
     fetch(url, {
       method: 'DELETE', 
       headers: {
@@ -15,7 +15,7 @@ const deleteProduct=(hostNumber,id)=>{
 
 const updateProduct=(hostNumber,id)=>{
     const host=`http://localhost:${hostNumber}`;
-    const url=`${host}/backend/editProduct/updateProduct/${id}`; 
+    const url=`${/backend/editProduct/updateProduct/${id}`; 
     fetch(url, {
       method: 'GET', 
       headers: {
