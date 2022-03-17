@@ -1,6 +1,5 @@
-const host=`http://localhost:4500`;
-
-const deleteProduct=async (id)=>{
+const deleteProduct=async (hostNumber,id)=>{
+    const host=`http://localhost:${hostNumber}`;
     const url=`${host}/backend/editProduct/deleteProduct/${id}`;
     const response = await fetch(url, {
       method: 'DELETE', 
@@ -10,7 +9,9 @@ const deleteProduct=async (id)=>{
     });
     window.location.href=response.url;
 }
-const updateProduct=async (id)=>{
+
+const updateProduct=async (hostNumber,id)=>{
+    const host=`http://localhost:${hostNumber}`;
     const url=`${host}/backend/editProduct/updateProduct/${id}`; 
     const response = await fetch(url, {
       method: 'GET', 
