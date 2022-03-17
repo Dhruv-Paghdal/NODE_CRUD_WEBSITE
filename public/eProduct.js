@@ -10,7 +10,7 @@ const deleteProduct=(hostNumber,id)=>{
         'Access-Control-Allow-Headers': 'Content-Type',
         'Access-Control-Allow-Credentials': true
       },
-    }).then((response)=>window.location.href=response.url).catch((err)=>{console.log(err)});
+    }).then((response)=>{window.location.href=response.url}).catch((err)=>{console.log(err)});
 }
 
 const updateProduct=(hostNumber,id)=>{
@@ -25,5 +25,5 @@ const updateProduct=(hostNumber,id)=>{
         'Access-Control-Allow-Headers': 'Content-Type',
         'Access-Control-Allow-Credentials': true
       },
-    }).then((response)=>window.location.href=response.url).catch((err)=>{console.log(err)});
+    }).then((response)=>{window.location.href=response.url}).catch((err)=>{console.log(err)});
 }
