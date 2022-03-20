@@ -139,49 +139,49 @@ let productDetails=()=>{
 
 // Getting images for home page
 let images=()=>{  
-    Products.findOne({name:'Belt Conveyor'}).then((result)=>{
+    Products.findOne({category:'Conveyor'}).then((result)=>{
         conveyorImage={
             contentType:result.contentType,
             imageBase64:result.imageBase64
         }
     }).catch((err)=>{console.log(err);})
 
-    Products.findOne({name:'Flat Bottle Labelling Machine'}).then((result)=>{
+    Products.findOne({category:'Labelling Machine'}).then((result)=>{
         labellingImage={
             contentType:result.contentType,
             imageBase64:result.imageBase64
         }
     }).catch((err)=>{console.log(err);})
 
-    Products.findOne({name:'2 Head Liquid Filling Machine'}).then((result)=>{
+    Products.findOne({category:'Liquid Filling Machine'}).then((result)=>{
         fillingImage={
             contentType:result.contentType,
             imageBase64:result.imageBase64
         }
     }).catch((err)=>{console.log(err);})
 
-    Products.findOne({name:'Battery Washing Machine'}).then((result)=>{
+    Products.findOne({category:'Battery Machines'}).then((result)=>{
         batteryImage={
             contentType:result.contentType,
             imageBase64:result.imageBase64
         }
     }).catch((err)=>{console.log(err);})
 
-    Products.findOne({name:'Carton Feeder'}).then((result)=>{
+    Products.findOne({category:'Feeder Machine'}).then((result)=>{
         feederImage={
             contentType:result.contentType,
             imageBase64:result.imageBase64
         }
     }).catch((err)=>{console.log(err);})
 
-    Products.findOne({name:'PFA Shrink Tunnel'}).then((result)=>{
+    Products.findOne({category:'Shrink Machine'}).then((result)=>{
         shrinkImage={
             contentType:result.contentType,
             imageBase64:result.imageBase64
         }
     }).catch((err)=>{console.log(err);})
 
-    Products.findOne({name:'Strech Wrapping Machine'}).then((result)=>{
+    Products.findOne({category:'Other Machineries'}).then((result)=>{
         otherImage={
             contentType:result.contentType,
             imageBase64:result.imageBase64
