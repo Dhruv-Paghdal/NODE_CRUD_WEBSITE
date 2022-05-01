@@ -237,5 +237,5 @@ Regards,
 ${buyerName}.`
     }).then((result)=>{console.log(result);}).catch((err)=>{console.log(err);});
     
-    res.redirect('/products');
+//     res.redirect('/products');
 }
